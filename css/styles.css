@@ -133,4 +133,5 @@ h2, h3, h4 {
 
 #cart {
   display: none;
+  font-weight: bold;
 }
