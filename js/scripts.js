@@ -49,25 +49,35 @@ User.prototype.addPizza = function(pizza) {
   this.pizzas.push(pizza);
 }
 
-
-
 // User Interface = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 function startOrder() {
 
 
 }
 
+function showOrderForm(pizzaName) {
+  switch(pizzaName) {
+    case "custom":
+      break;
+    case "pepperoni":
+      break;
+    case "mushroom":
+      break;
+    case "veggie":
+      break;
+    default:
+      break;
+  }
+}
+
 function attachListeners() {
 
   $(".card").click(function(event) {
     startOrder();
-  });
 
-  $(document).on('show.bs.modal', '#pizza-order', function (event) {
-    var modalLink = $(event.relatedTarget);
-    modalPlayerCode = $(modalLink).attr("name");
-    console.log("hi"  );
-    alert("Test");
+    var name = $(this).attr("id");
+    showOrderForm(name);
+
   });
 }
 
