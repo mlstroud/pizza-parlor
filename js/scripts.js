@@ -32,6 +32,17 @@ Pizza.prototype.updatePrice = function() {
   }
 }
 
+function User(userName, userAddress, userPhoneNumber) {
+  this.name = userName;
+  this.address = userAddress;
+  this.phoneNumber = userPhoneNumber;
+  this.pizzas = [];
+}
+
+User.prototype.addPizza = function(pizza) {
+  this.pizzas.push(pizza);
+}
+
 
 
 // User Interface = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
