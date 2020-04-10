@@ -135,3 +135,20 @@ h2, h3, h4 {
   display: none;
   font-weight: bold;
 }
+
+#order-form-body, #cart {
+  padding-left: 50px;
+}
+
+#submitrow{
+  width: 100%;
+  text-align: center;
+}
+
+#address-wrapper {
+  float: right;
+  display: none;
+}
+#address {
+  text-align: right;
+}

@@ -26,12 +26,10 @@ Order.prototype.show = function() {
     totalPrice += 5;
     outputHTML += "<br>Delivery Fee: $5.00";
   }
+
   $("#current-price").html("Total $" + totalPrice.toFixed(2));
+  
   return outputHTML;
-}
-
-Order.prototype.submit = function(item) {
-
 }
 
 function Pizza(pizzaSize, pizzaCrust, pizzaCheese, pizzaMeat, pizzaVeggies) {
@@ -201,10 +199,20 @@ function attachListeners() {
 
   $("button#addtocart").click(function() {
     var pizza = createPizza();
+    $("#cart").slideUp("slow", function() {
+      $("#cart").slideDown();
+    });
     order.add(pizza);
     $("#cart").text("");
     $("#cart").html(order.show());
-    $("#cart").slideDown();
+  });
+
+  $("#")
+
+  $("#pizza-form").submit(function(event) {
+    event.preventDefault();
+    alert("Thanks for your order! You will be redirected to our home page.");
+    location.reload();
   });
 }
 var order = new Order();

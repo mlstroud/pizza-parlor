@@ -18,9 +18,19 @@ _Users can customize their pizza, representated by a JavaScript object, and have
 | The program will store selected toppings in an array.                       | Medium, Beef, Olives, Jalapeños           | ["Beef", "Olives", "Jalapeños"]                                              |
 | The program will create a pizza object with user selections.                | Large, Hand Tossed, Pepperoni             | var pizza = new Pizza(Large, toppings)                                       |
 | The program will calculate cost based on toppings.                          | Large, Pan Pizza, Extra Cheese, Pepperoni | $16.50 | ($12 + $2 + $1) * 1.1                                               |
-| The program will hide all previous displays and show the order information. | Medium, Combo                             | Pizza will be delivered to ADDRESS in 45 minutes. Enter payment information. |
+| The program will add the pizza to the "Order".                              | order.push(pizza)                         | [pizza, pizza, pizza, ...] |
+| The program will append the created pizza to the cart.                      | Medium, Combo                             | Pizza 1 - Medium, etc...  |
+
+## Stretch Goals
+* Have non-custom pizza's have default topic selections based on the type of pizza.
+* Convert HTML display to be dynamically created, reducing overall "typed" code.
+* Add additional input validation.
+* Show more customized receipts.
+* Add payment collection form before submit.
 
 ## Known Bugs
+* Selecting Pepperoni Label does not trigger the checkbox.
+* Delivery address form not yet implemented.
 
 
 ## Setup/Installation Requirements
