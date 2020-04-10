@@ -28,7 +28,7 @@ Order.prototype.show = function() {
   }
 
   $("#current-price").html("Total $" + totalPrice.toFixed(2));
-  
+
   return outputHTML;
 }
 
@@ -74,8 +74,6 @@ Pizza.prototype.updatePrice = function() {
   this.price *= 1.10;
 }
 
-// User Interface = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-
 function createPizza() {
   var size = $("input[name=size]:checked").val();
   var crust = $("input[name=crust]:checked").val();
@@ -97,6 +95,7 @@ function createPizza() {
   return pizza;
 }
 
+// User Interface = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 function showOrderForm(pizzaName) {
   var orderHTML = "";
   var modalLabel = "Customize your ";
@@ -159,7 +158,6 @@ function showOrderForm(pizzaName) {
   "   <input  type='radio' name='cheese' value='Extra'> Extra" +
   " </label>" +
   "</div>" +
-
   "<h2>Meat</h2>" +
   "<div>" +
   " <input type='checkbox' name='meat' id='beef' value='Beef'>" +
@@ -169,7 +167,6 @@ function showOrderForm(pizzaName) {
   " <input type='checkbox' name='meat' id='pepperoni' value='Pepperoni'>" +
   " <label for='pepperoni'>Pepperoni</label><br>" +
   "</div>" +
-
   "<h2>Veggies</h2>" +
   "<div>" +
   " <input type='checkbox' name='veggies' id='olives' value='Olives'>" +

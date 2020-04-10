@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/styles.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+  crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+  integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+  crossorigin="anonymous"></script>
+  <script src="./js/scripts.js"></script>
+  <title>Pizza Parlor</title>
+</head>
 
-
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
-    crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
-    crossorigin="anonymous"></script>
-
-
-
-    <link rel="stylesheet" href="./css/styles.css" type="text/css">
-    <script src="./js/jquery-3.4.1.js"></script>
-    <script src="./js/scripts.js"></script>
-    <title>Pizza Parlor</title>
-  </head>
-  <body class="bg-light">
-    <div class="jumbotron sticky-top bg-warning">
-      <div id="header-wrapper">
+<body class="bg-light">
+  <div class="jumbotron sticky-top bg-warning">
+    <div id="header-wrapper">
 
 
       <img src="./img/logo.png" class="logo" alt="Logo image of a man riding a pizza bike.">
@@ -31,171 +29,177 @@
         <p id="title-footer">We'll code you up the perfect pizza.</p>
       </div>
     </div>
+  </div>
+
+  <div class="container">
+    <div class="row" class="sub-header">
+      <div class="well bg-warning">
+        Try our new Pepperoni++ pizza.
+      </div>
+      <h2>Menu</h2>
     </div>
 
-    <div class="container">
-      <div class="row" class="sub-header">
-        <div class="well bg-warning">
-          Try our new Pepperoni++ pizza.
-        </div>
-        <h2>Menu</h2>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="card mb-3" style="max-width: 540px;" id="custom" data-toggle="modal" data-target="#pizza-order">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="./img/pizza-custom.png" class="card-img" alt="Picture of an empty pizza.">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h4 class="card-title">Code your own</h4>
-                  <p class="card-text">Are you a client looking for custom specs on your pizza? Code up your own here.</p>
-                  <p class="card-text"><small class="text-muted">From $9.99</small></p>
-                </div>
-              </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card mb-3" style="max-width: 540px;" id="custom" data-toggle="modal" data-target="#pizza-order">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="./img/pizza-custom.png" class="card-img" alt="Picture of an empty pizza.">
             </div>
-          </div>
-          <div class="card mb-3" style="max-width: 540px;" id="pepperoni" data-toggle="modal" data-target="#pizza-order">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="./img/pizza-pepperoni.png" class="card-img" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h4 class="card-title">Pepperoni++</h4>
-                  <p class="card-text">Covered in pepperoni and delicious provolone cheese, all on top of our house marinana sauce.</p>
-                  <p class="card-text"><small class="text-muted">From $9.99</small></p>
-                </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title">Code your own</h4>
+                <p class="card-text">Are you a client looking for custom specs on your pizza? Code up your own here.</p>
+                <p class="card-text"><small class="text-muted">From $9.99</small></p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-sm-6">
-          <div class="card mb-3" style="max-width: 540px;" id="mushroom" data-toggle="modal" data-target="#pizza-order">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="./img/pizza-mushroom.png" class="card-img" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h4 class="card-title">Mushroom</h4>
-                  <p class="card-text"></p>Delicious mushroom and canadian bacon mix hiding the creamy alfredo sauce beneath.</p>
-                  <p class="card-text"><small class="text-muted">From $9.99</small></p>
-                </div>
-              </div>
+        <div class="card mb-3" style="max-width: 540px;" id="pepperoni" data-toggle="modal" data-target="#pizza-order">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="./img/pizza-pepperoni.png" class="card-img" alt="...">
             </div>
-          </div>
-          <div class="card mb-3" style="max-width: 540px;" id="veggie" data-toggle="modal" data-target="#pizza-order">
-            <div class="row no-gutters">
-              <div class="col-md-4">
-                <img src="./img/pizza-veggie.png" class="card-img" alt="...">
-              </div>
-              <div class="col-md-8">
-                <div class="card-body">
-                  <h4 class="card-title">Veggie</h4>
-                  <p class="card-text">A variety of fresh veggies including tomatoes, olives, peppers, and mushrooms laid out over our house marinara sauce.</p>
-                  <p class="card-text"><small class="text-muted">From $9.99</small></p>
-                </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title">Pepperoni++</h4>
+                <p class="card-text">Covered in pepperoni and delicious provolone cheese, all on top of our house
+                  marinana sauce.</p>
+                <p class="card-text"><small class="text-muted">From $9.99</small></p>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="row text-content">
-        <div class="col-sm-12">
-          <h2>Pizzacodus, changing the way you eat pizza.</h2>
-          <img src="./img/sliced-pizza.png" alt="Picture of a sliced pizza." class="img-body">
-          <p>Here at Pizzacodus we design our Pizza's with their quality in mind.</p>
-          <p>This is a process we like to call "Pizza Driven Development" or "PDD" for short.</p>
-          <p>Our Nutrition Engineers work day and night to ensure only the highest quality toppings are sourced for our pizzas.
-            Because of this you can rest assured that our pizzas are <span class="pun" data-toggle="tooltip" data-placement="top" title="Oh god what is wrong with me">bug free</span>.
-          </p>
-          <p>In a rush? We will email the pizza directly to you. Just use your 3D printer to print it and toss it in the oven.</p>
-        </div>
-      </div>
-      
-
-
-      <div class="modal fade" id="pizza-order" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header bg-warning">
-              <h5 class="modal-title" id="modalLabel"></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+      <div class="col-sm-6">
+        <div class="card mb-3" style="max-width: 540px;" id="mushroom" data-toggle="modal" data-target="#pizza-order">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="./img/pizza-mushroom.png" class="card-img" alt="...">
             </div>
-            <div class="modal-body">
-              <div class="order-content">
-                <form id="pizza-form">
-                  <div class="row order-options">
-                    <div class="col-md-6">
-                      <div class="radio">
-                        <label>
-                          <img src="./img/carryout.png" class="img-order" alt="Picture of pizza boxes.">
-                          <br><br>
-                          <h3>Carryout</h3>
-                          <input type="radio" name="order-type" value="carryout" checked>
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="radio">
-                        <label>
-                          <img src="./img/delivery.png" class="img-order" alt="Picture of pizza delivery man.">
-                          <br><br>
-
-                          <h3>Delivery</h3>
-                          <input type="radio" name="order-type" value="delivery">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <hr>
-                  <div id="address-wrapper">
-                    <div id="address">
-                      <label for="street">Street: </label>
-                      <input type="text" id="street"><br>
-                      <label for="street">City: </label>
-                      <input type="text" id="city"><br>
-                      <label for="street">State: </label>
-                      <input type="text" id="street"><br>
-                      <label for="street">Zip Code: </label>
-                      <input type="text" id="street"><br>
-                      <hr>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div id="order-form-body">
-                    </div>
-                    <div id="cart">
-                    </div>
-                    <div id="submitrow">
-                      <button type="submit" class="btn btn-warning" id="submit" style="position: left;">Place Order</button>
-                    </div>
-                  </div>
-           
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title">Mushroom</h4>
+                <p class="card-text"></p>Delicious mushroom and canadian bacon mix hiding the creamy alfredo sauce
+                beneath.</p>
+                <p class="card-text"><small class="text-muted">From $9.99</small></p>
               </div>
             </div>
-            <div class="modal-footer">
-              <span id="current-price">Total:</span>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-warning" id="addtocart">Add to Cart</button>
+          </div>
+        </div>
+        <div class="card mb-3" style="max-width: 540px;" id="veggie" data-toggle="modal" data-target="#pizza-order">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="./img/pizza-veggie.png" class="card-img" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title">Veggie</h4>
+                <p class="card-text">A variety of fresh veggies including tomatoes, olives, peppers, and mushrooms laid
+                  out over our house marinara sauce.</p>
+                <p class="card-text"><small class="text-muted">From $9.99</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row text-content">
+      <div class="col-sm-12">
+        <h2>Pizzacodus, changing the way you eat pizza.</h2>
+        <img src="./img/sliced-pizza.png" alt="Picture of a sliced pizza." class="img-body">
+        <p>Here at Pizzacodus we design our Pizza's with their quality in mind.</p>
+        <p>This is a process we like to call "Pizza Driven Development" or "PDD" for short.</p>
+        <p>Our Nutrition Engineers work day and night to ensure only the highest quality toppings are sourced for our
+          pizzas.
+          Because of this you can rest assured that our pizzas are <span class="pun" data-toggle="tooltip"
+            data-placement="top" title="Oh god what is wrong with me">bug free</span>.
+        </p>
+        <p>In a rush? We will email the pizza directly to you. Just use your 3D printer to print it and toss it in the
+          oven.</p>
+      </div>
+    </div>
+
+    <div class="modal fade" id="pizza-order" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-warning">
+            <h5 class="modal-title" id="modalLabel"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="order-content">
+              <form id="pizza-form">
+                <div class="row order-options">
+                  <div class="col-md-6">
+                    <div class="radio">
+                      <label>
+                        <img src="./img/carryout.png" class="img-order" alt="Picture of pizza boxes.">
+                        <br><br>
+                        <h3>Carryout</h3>
+                        <input type="radio" name="order-type" value="carryout" checked>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="radio">
+                      <label>
+                        <img src="./img/delivery.png" class="img-order" alt="Picture of pizza delivery man.">
+                        <br><br>
+
+                        <h3>Delivery</h3>
+                        <input type="radio" name="order-type" value="delivery">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <hr>
+                <div id="address-wrapper">
+                  <div id="address">
+                    <label for="street">Street: </label>
+                    <input type="text" id="street"><br>
+                    <label for="street">City: </label>
+                    <input type="text" id="city"><br>
+                    <label for="street">State: </label>
+                    <input type="text" id="street"><br>
+                    <label for="street">Zip Code: </label>
+                    <input type="text" id="street"><br>
+                    <hr>
+                  </div>
+                </div>
+                <div class="row">
+                  <div id="order-form-body">
+                  </div>
+                  <div id="cart">
+                  </div>
+                  <div id="submitrow">
+                    <button type="submit" class="btn btn-warning" id="submit">Place Order</button>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+          <div class="modal-footer">
+            <span id="current-price">Total:</span>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-warning" id="addtocart">Add to Cart</button>
             </form>
-            </div>
           </div>
         </div>
       </div>
-       
+    </div>
 
-        
-        
-    </div>
-    <div class="footer bg-warning">
-      Copyright © 2020 Matt Stroud
-    </div>
-  </body>
+
+
+
+  </div>
+  <div class="footer bg-warning">
+    Copyright © 2020 Matt Stroud
+  </div>
+</body>
+
 </html>
