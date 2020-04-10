@@ -59,9 +59,15 @@ function startOrder() {
 
 function attachListeners() {
 
-  $(".card").click(function() {
+  $(".card").click(function(event) {
     startOrder();
-    alert(this.id);
+  });
+
+  $(document).on('show.bs.modal', '#pizza-order', function (event) {
+    var modalLink = $(event.relatedTarget);
+    modalPlayerCode = $(modalLink).attr("name");
+    console.log("hi"  );
+    alert("Test");
   });
 }
 

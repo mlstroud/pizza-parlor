@@ -56,3 +56,11 @@ body {
 .card-img {
   float: left;
 }
+
+.img-order {
+  width: 50%;
+}
+
+.order-options {
+  text-align: center;
+}
