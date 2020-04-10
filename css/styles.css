@@ -1,8 +1,13 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .jumbotron {
   background-color: #EEEEEE;
   height: 125px;
   padding: 20px;
   box-shadow: 1px 1px 3px black;
+  margin-bottom: 3%;
 }
 
 .jumbotron::after {
@@ -13,11 +18,35 @@
 
 #header-text {
   margin-left: 20%;
-  
 }
 
 .logo {
   margin-left: 10%;
   width: 8%;
   float: left;
+}
+
+#title-footer {
+  margin-left: 5%;
+  font-style: italic;
+}
+
+.well {
+  width: 100%;
+  margin-bottom:
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+
+.sub-header {
+  margin: 10px;
+}
+
+.card {
+  box-shadow: 1px 1px 3px black;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }

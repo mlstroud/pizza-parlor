@@ -8,13 +8,13 @@ function Pizza(pizzaSize, pizzaToppings) {
 Pizza.prototype.updatePrice = function() {
   switch(this.size) {
     case "Small":
-      this.price = 10;
+      this.price = 9.99;
       break;
     case "Medium":
-      this.price = 12;
+      this.price = 11.99;
       break;
     case "Large":
-      this.price = 14;
+      this.price = 13.99;
       break;
     default:
       this.price = 0;
@@ -53,5 +53,10 @@ User.prototype.addPizza = function(pizza) {
 
 // User Interface = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 $(document).ready(function() {
+
+  $(".card").click(function() {
+
+    alert("yes");
+  });
 
 });
