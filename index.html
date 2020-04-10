@@ -122,7 +122,7 @@
       <div class="modal fade" id="pizza-order" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
           <div class="modal-content">
-            <div class="modal-header">
+            <div class="modal-header bg-warning">
               <h5 class="modal-title" id="modalLabel"></h5>
               <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
@@ -130,26 +130,45 @@
             </div>
             <div class="modal-body">
               <div class="order-content">
-                <div class="row order-options">
-                  <div class="col-md-6">
-                    <img src="./img/carryout.png" class="img-order" alt="Picture of pizza boxes.">
-                    <br><br>
-                    <h3>Carryout</h3>
+                <form id="pizza-form">
+                  <div class="row order-options">
+                    <div class="col-md-6">
+                      <div class="radio">
+                        <label>
+                          <img src="./img/carryout.png" class="img-order" alt="Picture of pizza boxes.">
+                          <br><br>
+                          <h3>Carryout</h3>
+                          <input type="radio" name="order-type" value="carryout" checked>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="radio">
+                        <label>
+                          <img src="./img/delivery.png" class="img-order" alt="Picture of pizza delivery man.">
+                          <br><br>
+
+                          <h3>Delivery</h3>
+                          <input type="radio" name="order-type" value="delivery">
+                        </label>
+                      </div>
+                    </div>
                   </div>
-                  <div class="col-md-6">
-                    <img src="./img/delivery.png" class="img-order" alt="Picture of pizza delivery man.">
-                    <br><br>
-                    <h3>Delivery</h3>
+                  <hr>
+                  <div class="row">
+                    <div id="order-form-body">
+                    </div>
+                    <div id="cart">
+                    </div>
                   </div>
-                </div>
-                <div id="order-form-body">
-    
-                </div>
-             </div>
+           
+              </div>
             </div>
             <div class="modal-footer">
+              <span id="current-price">Total:</span>
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-warning">Place Order</button>
+              <button type="submit" class="btn btn-warning" id="addtocart">Add to Cart</button>
+            </form>
             </div>
           </div>
         </div>

@@ -63,7 +63,7 @@ body {
 }
 
 .img-order {
-  width: 50%;
+  height: 150px;
 }
 
 .order-options {
@@ -113,6 +113,24 @@ label {
   font-weight: bold;
 }
 
-.form-control {
+.form-container {
+  margin: 0 auto;
+  text-align: left;
+  width: 30%;
+}
 
+.radio {
+  margin: 10px;
+}
+
+h2, h3, h4 {
+  color: orange;
+}
+
+#current-price {
+  font-weight: bold;
+}
+
+#cart {
+  display: none;
 }
