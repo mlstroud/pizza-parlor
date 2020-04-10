@@ -65,3 +65,20 @@ body {
   text-align: center;
 }
 
+.text-content {
+  margin-top: 5%;
+}
+
+.img-body {
+  float: right;
+  width: 50%;
+}
+
+.pun {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.pun .hoverText {
+  visibility: hidden;
+}
