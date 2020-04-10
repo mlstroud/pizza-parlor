@@ -33,7 +33,7 @@ body {
 
 .well {
   width: 100%;
-  margin-bottom:
+  margin-bottom;
   text-align: center;
   padding: 15px;
   font-weight: bold;
@@ -45,8 +45,14 @@ body {
 
 .card {
   box-shadow: 1px 1px 3px black;
+  padding: 5px;
+  height: 50%;
 }
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 2px 2px 5px orange;
+}
+.card-img {
+  float: left;
 }

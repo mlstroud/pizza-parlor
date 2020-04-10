@@ -52,11 +52,20 @@ User.prototype.addPizza = function(pizza) {
 
 
 // User Interface = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
-$(document).ready(function() {
+function startOrder() {
+
+
+}
+
+function attachListeners() {
 
   $(".card").click(function() {
-
-    alert("yes");
+    startOrder();
+    alert(this.id);
   });
+}
 
+$(document).ready(function() {
+
+  attachListeners();
 });

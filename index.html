@@ -5,6 +5,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+    crossorigin="anonymous"></script>
+
+
+
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
     <script src="./js/jquery-3.4.1.js"></script>
     <script src="./js/scripts.js"></script>
@@ -35,29 +46,29 @@
 
         <div class="col-md-6">
 
-          <div class="card mb-3" style="max-width: 540px;">
+          <div class="card mb-3" style="max-width: 540px;" data-toggle="modal" data-target="#pizza-order">
             <div class="row no-gutters">
               <div class="col-md-4">
-                <img src="./img/pizza-pepperoni.png" class="card-img" alt="...">
+                <img src="./img/pizza-custom.png" class="card-img" alt="Picture of an empty pizza.">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Pepperoni++</h5>
-                  <p class="card-text">Covered in pepperoni and delicious provolone cheese, all on top of our house marinana sauce.</p>
+                  <h4 class="card-title">Code your own</h4>
+                  <p class="card-text">Are you a client looking for custom specs on your pizza? Code up your own here.</p>
                   <p class="card-text"><small class="text-muted">From $9.99</small></p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="card mb-3" style="max-width: 540px;">
+          <div class="card mb-3" style="max-width: 540px;" data-toggle="modal" data-target="#pizza-order">
             <div class="row no-gutters">
               <div class="col-md-4">
                 <img src="./img/pizza-pepperoni.png" class="card-img" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Pepperoni++</h5>
+                  <h4 class="card-title">Pepperoni++</h4>
                   <p class="card-text">Covered in pepperoni and delicious provolone cheese, all on top of our house marinana sauce.</p>
                   <p class="card-text"><small class="text-muted">From $9.99</small></p>
                 </div>
@@ -69,30 +80,30 @@
 
         <div class="col-md-6">
 
-          <div class="card mb-3" style="max-width: 540px;">
+          <div class="card mb-3" style="max-width: 540px;" data-toggle="modal" data-target="#pizza-order">
             <div class="row no-gutters">
               <div class="col-md-4">
-                <img src="./img/pizza-pepperoni.png" class="card-img" alt="...">
+                <img src="./img/pizza-mushroom.png" class="card-img" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Pepperoni++</h5>
-                  <p class="card-text">Covered in pepperoni and delicious provolone cheese, all on top of our house marinana sauce.</p>
+                  <h4 class="card-title">Mushroom</h4>
+                  <p class="card-text"></p>Delicious mushroom and canadian bacon mix hiding the creamy alfredo sauce beneath.</p>
                   <p class="card-text"><small class="text-muted">From $9.99</small></p>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="card mb-3" style="max-width: 540px;">
+          <div class="card mb-3" style="max-width: 540px;" id="veggie" data-toggle="modal" data-target="#pizza-order">
             <div class="row no-gutters">
               <div class="col-md-4">
-                <img src="./img/pizza-pepperoni.png" class="card-img" alt="...">
+                <img src="./img/pizza-veggie.png" class="card-img" alt="...">
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h5 class="card-title">Pepperoni++</h5>
-                  <p class="card-text">Covered in pepperoni and delicious provolone cheese, all on top of our house marinana sauce.</p>
+                  <h4 class="card-title">Veggie</h4>
+                  <p class="card-text">A variety of fresh veggies including tomatoes, olives, peppers, and mushrooms laid out over our house marinara sauce.</p>
                   <p class="card-text"><small class="text-muted">From $9.99</small></p>
                 </div>
               </div>
@@ -101,6 +112,29 @@
 
         </div>
 
+      </div>
+
+
+
+
+      <div class="modal fade" id="pizza-order" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Customize your pizza</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-warning">Save changes</button>
+            </div>
+          </div>
+        </div>
       </div>
        
 
