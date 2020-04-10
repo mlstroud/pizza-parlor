@@ -30,6 +30,12 @@ Pizza.prototype.updatePrice = function() {
   if(this.toppings.includes("Pan Pizza")) {
     this.price += 2;
   }
+
+  if(this.toppings.includes("Extra Cheese")) {
+    this.price += 1.50;
+  }
+
+  this.price *= 1.10;
 }
 
 function User(userName, userAddress, userPhoneNumber) {
