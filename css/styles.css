@@ -80,7 +80,7 @@ body {
 }
 
 .img-body:hover, .logo:hover, .img-order:hover {
-  transform: scale(1.05);
+  animation: logoToggle 1000ms ease-in-out infinite;
 }
 
 .pun {
@@ -103,4 +103,16 @@ body {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); }
   100% { transform: scale(1); }
+}
+
+#order-form-body {
+  width: 100%;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-control {
+
 }

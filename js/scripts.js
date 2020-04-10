@@ -1,4 +1,12 @@
 // Business Logic = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+function Order() {
+  this.items = [];
+}
+
+Order.prototype.add = function(item) {
+  this.items.push(item);
+}
+
 function Pizza(pizzaSize, pizzaToppings) {
   this.size = pizzaSize;
   this.toppings = pizzaToppings;
@@ -56,18 +64,44 @@ function startOrder() {
 }
 
 function showOrderForm(pizzaName) {
+  var orderHTML = "";
+  var modalLabel = "Customize your ";
+  var name = "";
+
   switch(pizzaName) {
     case "custom":
+      modalLabel += "Custom pizza!";
       break;
     case "pepperoni":
+      modalLabel += "Pepperoni++ pizza!";
       break;
     case "mushroom":
+      modalLabel += "Mushroom pizza!";
       break;
     case "veggie":
+      modalLabel += "Veggie pizza!";
       break;
     default:
+      modalLabel = "Error";
       break;
   }
+
+  orderHTML +=
+  "<h2>Crust</h2>" +
+  "<div class='radio'>" + 
+  " <label>" +
+  "   <input  type='radio' name='crust' value='handtossed' checked> Hand Tossed" +
+  " </label>" +
+  "</div>" +
+  "<h2>Cheese</h2>" +
+  "<div class='radio'>" + 
+  " <label>" +
+  "   <input  type='radio' name='crust' value='handtossed' checked> Hand Tossed" +
+  " </label>" +
+  "</div>";
+
+  $("#modalLabel").html(modalLabel);
+  $("#order-form-body").html(orderHTML);
 }
 
 function attachListeners() {
