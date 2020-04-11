@@ -1,15 +1,28 @@
 // Business Logic = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 function Order() {
   this.items = [];
+  this.totalPrice = 0;
 }
 
 Order.prototype.add = function(item) {
   this.items.push(item);
 }
 
+Order.prototype.getTotalPrice = function() {
+  this.totalPrice = 0;
+  for(var index = 0; index < this.items.length; index++) {
+    this.totalPrice += this.items[index].price;
+  }
+
+  if($("input:radio[name='order-type']:checked").val() === "delivery"){
+    this.totalPrice += 5;
+  }
+
+  return (this.totalPrice * 1.1).toFixed(2);
+}
+
 Order.prototype.show = function() {
   var outputHTML = "";
-  var totalPrice = 0;
 
   for(var index = 0; index < this.items.length; index++) {
     outputHTML += 
@@ -20,14 +33,13 @@ Order.prototype.show = function() {
     "Meat: " + this.items[index].meat.join(", ") + "<br>" +
     "Veggies: " + this.items[index].veggies.join(", ") + "<br>" +
     "Price: " + this.items[index].price.toFixed(2) + "<br>";
-    totalPrice += this.items[index].price;
   }
 
   if($("input:radio[name='order-type']:checked").val() === "delivery"){
-    totalPrice += 5;
     outputHTML += "<br>Delivery Fee: $5.00";
   }
-  $("#current-price").html("Total $" + totalPrice.toFixed(2));
+
+  $("#current-price").html("Total $" + this.getTotalPrice());
   return outputHTML;
 }
 
@@ -69,8 +81,6 @@ Pizza.prototype.updatePrice = function() {
   if(this.cheese === "Extra") {
     this.price += 1.50;
   }
-
-  this.price *= 1.10;
 }
 
 function createPizza() {
@@ -99,7 +109,6 @@ function showOrderForm(pizzaName) {
   var orderHTML = "";
   var modalLabel = "Customize your ";
   var name = "";
-
   switch(pizzaName) {
     case "custom":
       modalLabel += "Custom pizza!";
@@ -117,6 +126,7 @@ function showOrderForm(pizzaName) {
       modalLabel = "Error";
       break;
   }
+
 
   orderHTML +=
   "<h2>Size</h2>" +
