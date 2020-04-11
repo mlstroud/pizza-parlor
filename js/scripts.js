@@ -156,7 +156,6 @@ function showOrderForm(pizzaName) {
   "   <input  type='radio' name='cheese' value='Extra'> Extra" +
   " </label>" +
   "</div>" +
-
   "<h2>Meat</h2>" +
   "<div>" +
   " <input type='checkbox' name='meat' id='beef' value='Beef'>" +
@@ -166,7 +165,6 @@ function showOrderForm(pizzaName) {
   " <input type='checkbox' name='meat' id='pepperoni' value='Pepperoni'>" +
   " <label for='pepperoni'>Pepperoni</label><br>" +
   "</div>" +
-
   "<h2>Veggies</h2>" +
   "<div>" +
   " <input type='checkbox' name='veggies' id='olives' value='Olives'>" +
@@ -194,6 +192,7 @@ function attachListeners() {
     var pizza = createPizza();
     $("#cart").slideUp("slow", function() {
       $("#cart").slideDown();
+      $("#submit").show();
     });
     order.add(pizza);
     $("#cart").text("");
