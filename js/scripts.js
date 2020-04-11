@@ -194,11 +194,6 @@ function attachListeners() {
     showOrderForm(name);
   });
 
-  $("#pizza-form").submit(function(event) {
-    event.preventDefault();
-    alert("Test");
-  });
-
   $("button#addtocart").click(function() {
     var pizza = createPizza();
     $("#cart").slideUp("slow", function() {
@@ -208,9 +203,7 @@ function attachListeners() {
     $("#cart").text("");
     $("#cart").html(order.show());
   });
-
-  $()
-
+  
   $("#pizza-form").submit(function(event) {
     event.preventDefault();
     alert("Thanks for your order! You will be redirected to our home page.");
