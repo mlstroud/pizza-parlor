@@ -18,7 +18,8 @@ Order.prototype.show = function() {
     "Crust: " + this.items[index].crust + "<br>" +
     "Cheese: " + this.items[index].cheese + "<br>" +
     "Meat: " + this.items[index].meat.join(", ") + "<br>" +
-    "Veggies: " + this.items[index].veggies.join(", ") + "<br>";
+    "Veggies: " + this.items[index].veggies.join(", ") + "<br>" +
+    "Price: " + this.items[index].price.toFixed(2) + "<br>";
     totalPrice += this.items[index].price;
   }
 
