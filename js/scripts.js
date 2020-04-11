@@ -30,10 +30,6 @@ Order.prototype.show = function() {
   return outputHTML;
 }
 
-Order.prototype.submit = function(item) {
-
-}
-
 function Pizza(pizzaSize, pizzaCrust, pizzaCheese, pizzaMeat, pizzaVeggies) {
   this.size = pizzaSize;
   this.crust = pizzaCrust;
