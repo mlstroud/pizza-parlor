@@ -27,6 +27,7 @@ _Users can customize their pizza, representated by a JavaScript object, and have
 * Add additional input validation.
 * Show more customized receipts.
 * Add payment collection form before submit.
+* Add option to delete item from order.
 
 ## Known Bugs
 * Selecting Pepperoni Label does not trigger the checkbox.
