@@ -9,6 +9,11 @@ _An independent project from Epicodus._
 _This application uses object oriented programming to create a pizza order application._  
 _Users can customize their pizza, representated by a JavaScript object, and have the cost calculated._  
 
+## Technology
+* JavaScript & jQuery
+* Bootstrap
+* HTML & CSS
+
 ## Specs
 
 | Behavior                                                                    |                   Input                   |                                                                       Output |
