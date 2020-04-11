@@ -26,10 +26,12 @@ Order.prototype.show = function() {
     totalPrice += 5;
     outputHTML += "<br>Delivery Fee: $5.00";
   }
-
   $("#current-price").html("Total $" + totalPrice.toFixed(2));
-
   return outputHTML;
+}
+
+Order.prototype.submit = function(item) {
+
 }
 
 function Pizza(pizzaSize, pizzaCrust, pizzaCheese, pizzaMeat, pizzaVeggies) {
@@ -158,6 +160,7 @@ function showOrderForm(pizzaName) {
   "   <input  type='radio' name='cheese' value='Extra'> Extra" +
   " </label>" +
   "</div>" +
+
   "<h2>Meat</h2>" +
   "<div>" +
   " <input type='checkbox' name='meat' id='beef' value='Beef'>" +
@@ -167,6 +170,7 @@ function showOrderForm(pizzaName) {
   " <input type='checkbox' name='meat' id='pepperoni' value='Pepperoni'>" +
   " <label for='pepperoni'>Pepperoni</label><br>" +
   "</div>" +
+
   "<h2>Veggies</h2>" +
   "<div>" +
   " <input type='checkbox' name='veggies' id='olives' value='Olives'>" +
@@ -192,6 +196,7 @@ function attachListeners() {
 
   $("#pizza-form").submit(function(event) {
     event.preventDefault();
+    alert("Test");
   });
 
   $("button#addtocart").click(function() {
@@ -204,7 +209,7 @@ function attachListeners() {
     $("#cart").html(order.show());
   });
 
-  $("#")
+  $()
 
   $("#pizza-form").submit(function(event) {
     event.preventDefault();
